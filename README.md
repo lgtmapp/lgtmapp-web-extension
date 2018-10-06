@@ -4,7 +4,7 @@ Say &#39;Looks good to me&#39; with pictures!
 
 ## Install
 
-	$ npm install
+    $ npm install
 
 ## Development
 
@@ -22,8 +22,8 @@ Say &#39;Looks good to me&#39; with pictures!
 
 ## Environment
 
-The build tool also defines a variable named `process.env.NODE_ENV` in your scripts. 
+The build tool also defines a variable named `process.env.NODE_ENV` in your scripts.
 
 ## Docs
 
-* [webextension-toolbox](https://github.com/HaNdTriX/webextension-toolbox)
+-   [webextension-toolbox](https://github.com/HaNdTriX/webextension-toolbox)

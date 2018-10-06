@@ -1,24 +1,42 @@
 {
-  "name": "lgtmapp-web-extension",
-  "version": "0.0.1",
-  "description": "Say &#39;Looks good to me&#39; with pictures!",
-  "scripts": {
-    "dev": "webextension-toolbox dev",
-    "build": "webextension-toolbox build",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "yarn run lint",
-    "format": "prettier --write \"**/*.{js,json,md}\""
-  },
-  "devDependencies": {
-    "webextension-toolbox": "latest"
-  },
-  "dependencies": {
-    "npm": "^6.4.1",
-    "prop-types": "^15.6.2",
-    "react": "^16.5.2",
-    "react-copy-to-clipboard": "^5.0.1",
-    "react-dom": "^16.5.2",
-    "react-spinners": "^0.4.5",
-    "react-toastify": "^4.4.0"
-  }
+    "name": "lgtmapp-web-extension",
+    "version": "0.0.1",
+    "description": "Say &#39;Looks good to me&#39; with pictures!",
+    "scripts": {
+        "dev": "webextension-toolbox dev",
+        "build": "webextension-toolbox build",
+        "lint": "eslint --ext .js --ignore-path .gitignore .",
+        "precommit": "yarn run lint",
+        "format": "prettier-eslint --write \"**/*.{js,json,md}\""
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "prettier",
+            "eslint --fix",
+            "git add"
+        ]
+    },
+    "devDependencies": {
+        "eslint": "^5.6.1",
+        "eslint-plugin-react": "^7.11.1",
+        "husky": "^1.1.1",
+        "lint-staged": "^7.3.0",
+        "prettier": "^1.14.3",
+        "prettier-eslint-cli": "^4.7.1",
+        "webextension-toolbox": "latest"
+    },
+    "dependencies": {
+        "npm": "^6.4.1",
+        "prop-types": "^15.6.2",
+        "react": "^16.5.2",
+        "react-copy-to-clipboard": "^5.0.1",
+        "react-dom": "^16.5.2",
+        "react-spinners": "^0.4.5",
+        "react-toastify": "^4.4.0"
+    }
 }

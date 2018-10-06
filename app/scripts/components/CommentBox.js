@@ -1,17 +1,15 @@
-import React from 'react'
+import React from "react";
 
 class CommentBox extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+    constructor(props) {
+        super(props);
+    }
 
-  render() {
-    return(
-      <div className='commentBox'>
-        Hello, world! I am a CommentBox.
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="commentBox">Hello, world! I am a CommentBox.</div>
+        );
+    }
 }
 
 export default CommentBox;
