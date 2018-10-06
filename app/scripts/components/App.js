@@ -2,6 +2,7 @@ import React from "react";
 import Image from "./Image";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 class App extends React.Component {
     constructor(props) {
