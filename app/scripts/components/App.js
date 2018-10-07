@@ -9,7 +9,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
 
-        this.host = "http://localhost:3000";
+        this.host = "https://www.lgtm.app";
 
         this.state = { images: [] };
 
