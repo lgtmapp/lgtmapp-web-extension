@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "./Image";
+import LoadButton from "./LoadButton";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Ink from "react-ink";
 
 class App extends React.Component {
     constructor(props) {
@@ -19,19 +19,6 @@ class App extends React.Component {
 
         this.toastStyle = {
             fontSize: "1rem"
-        };
-
-        this.loadButtonStyle = {
-            backgroundColor: "#ce3026",
-            color: "#ffffff",
-            display: "block",
-            fontFamily: "'Lato', Helvetica, Arial, sans-serif",
-            fontSize: "0.8rem",
-            fontWeight: "700",
-            padding: "10px",
-            textAlign: "center",
-            width: "100%",
-            position: "relative"
         };
 
         this.imageCount = 3;
@@ -75,13 +62,8 @@ class App extends React.Component {
                     position="bottom-center"
                 />
 
-                <button
-                    style={this.loadButtonStyle}
-                    onClick={this.refreshImages.bind(this)}
-                >
-                    <Ink />
-                    More LGTM!
-                </button>
+                <LoadButton onClick={this.refreshImages.bind(this)} />
+
                 {this.state.images.map((image, idx) => (
                     <CopyToClipboard
                         key={idx}
