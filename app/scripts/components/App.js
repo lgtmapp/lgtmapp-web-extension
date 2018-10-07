@@ -3,6 +3,7 @@ import Image from "./Image";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Ink from "react-ink";
 
 class App extends React.Component {
     constructor(props) {
@@ -21,16 +22,16 @@ class App extends React.Component {
         };
 
         this.loadButtonStyle = {
-            width: "100%",
-            padding: "10px",
             backgroundColor: "#ce3026",
-            fontFamily: "'Lato', Helvetica, Arial, sans-serif",
-            fontWeight: "700",
             color: "#ffffff",
-            textAlign: "center",
             display: "block",
-            textDecoration: "none",
-            outline: "none"
+            fontFamily: "'Lato', Helvetica, Arial, sans-serif",
+            fontSize: "0.8rem",
+            fontWeight: "700",
+            padding: "10px",
+            textAlign: "center",
+            width: "100%",
+            position: "relative"
         };
 
         this.imageCount = 3;
@@ -78,6 +79,7 @@ class App extends React.Component {
                     style={this.loadButtonStyle}
                     onClick={this.refreshImages.bind(this)}
                 >
+                    <Ink />
                     More LGTM!
                 </button>
                 {this.state.images.map((image, idx) => (

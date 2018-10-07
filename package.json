@@ -39,6 +39,7 @@
         "react": "^16.5.2",
         "react-copy-to-clipboard": "^5.0.1",
         "react-dom": "^16.5.2",
+        "react-ink": "^6.4.0",
         "react-toastify": "^4.4.0"
     }
 }
