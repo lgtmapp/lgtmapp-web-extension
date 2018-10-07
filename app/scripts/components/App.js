@@ -70,7 +70,7 @@ class App extends React.Component {
             <div className="app" style={this.appStyle}>
                 <ToastContainer
                     style={this.toastStyle}
-                    autoClose={3000}
+                    autoClose={1500}
                     position="bottom-center"
                 />
 

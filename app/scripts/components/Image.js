@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { MoonLoader } from "react-spinners";
+import Loader from "../../images/loader.svg";
 
 class Image extends React.Component {
     constructor(props) {
@@ -17,7 +17,18 @@ class Image extends React.Component {
 
         this.imageStyle = {
             cursor: "pointer",
-            objectFit: "cover"
+            objectFit: "cover",
+            border: "5px #ffffff solid",
+            width: `${this.width}px`,
+            height: `${this.height}px`,
+            margin: "7.5px 0 7.5px 15px"
+        };
+
+        this.loaderStyle = {
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)"
         };
     }
 
@@ -27,25 +38,21 @@ class Image extends React.Component {
                 {(() => {
                     if (this.props.src === "") {
                         const style = {
+                            border: "5px #ffffff solid",
+                            margin: "7.5px 0 18px 15px",
                             width: this.width,
-                            height: this.height
+                            height: this.height,
+                            position: "relative"
                         };
                         return (
                             <div style={style}>
-                                <MoonLoader
-                                    loading={true}
-                                    size={80}
-                                    sizeUnit={"px"}
-                                    color={"#F5A623"}
-                                />
+                                <Loader style={this.loaderStyle} />
                             </div>
                         );
                     }
                     return (
                         <img
                             src={this.props.src}
-                            height={this.height}
-                            width={this.width}
                             style={this.imageStyle}
                         />
                     );
