@@ -1,6 +1,6 @@
 {
     "name": "lgtmapp-web-extension",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Say 'Looks good to me' with pictures!",
     "scripts": {
         "dev": "webextension-toolbox dev",
