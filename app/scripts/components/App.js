@@ -53,6 +53,10 @@ class App extends React.Component {
         }
     }
 
+    toMarkdown(src) {
+        return `![LGTM](${src})`;
+    }
+
     render() {
         return (
             <div className="app" style={this.appStyle}>
@@ -67,7 +71,7 @@ class App extends React.Component {
                 {this.state.images.map((image, idx) => (
                     <CopyToClipboard
                         key={idx}
-                        text={image.src}
+                        text={this.toMarkdown(image.src)}
                         onCopy={() => toast("😸Copied!")}
                     >
                         <a>
