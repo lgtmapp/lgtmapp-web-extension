@@ -8,7 +8,7 @@
         "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name."
     },
     "appDescription": {
-        "message": "Say &#39;Looks good to me&#39; with pictures!",
+        "message": "Say 'Looks good to me' with pictures!",
         "description": "The description of the application"
     },
     "browserActionTitle": {
