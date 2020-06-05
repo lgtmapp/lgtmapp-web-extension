@@ -1,8 +1,4 @@
-import domready from "domready";
-
-domready(() => {
-    const toolbar = document.querySelector("markdown-toolbar[for='pull_request_review_body']");
-
+function addLGTMButtone(e) {
     const div = document.createElement("div");
     div.className = "d-inline-block";
 
@@ -11,8 +7,8 @@ domready(() => {
     btn.onclick = insertLGTM;
 
     div.appendChild(btn);
-    toolbar.appendChild(div);
-});
+    e.appendChild(div);
+}
 
 async function insertLGTM(e) {
     e.preventDefault();
@@ -36,3 +32,17 @@ async function fetchImage() {
         throw new Error(err);
     }
 }
+
+const observer = new MutationObserver( (mutations, me) => {
+    const toolbar = document.querySelector("markdown-toolbar[for='pull_request_review_body']");
+    if (toolbar) {
+        addLGTMButtone(toolbar);
+        me.disconnect();
+        return;
+    }
+});
+
+observer.observe(document, {
+    childList: true,
+    subtree: true
+});
