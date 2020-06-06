@@ -1,18 +1,18 @@
 {
-    "appName": {
-        "message": "LGTM.app",
-        "description": "The name of the application"
-    },
-    "appShortName": {
-        "message": "lgtmapp",
-        "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name."
-    },
-    "appDescription": {
-        "message": "Say 'Looks good to me' with pictures!",
-        "description": "The description of the application"
-    },
-    "browserActionTitle": {
-        "message": "lgtmapp web extension",
-        "description": "The title of the browser action button"
-    }
+  "appName": {
+    "message": "LGTM.app",
+    "description": "The name of the application"
+  },
+  "appShortName": {
+    "message": "lgtmapp",
+    "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name."
+  },
+  "appDescription": {
+    "message": "Say 'Looks good to me' with pictures!",
+    "description": "The description of the application"
+  },
+  "browserActionTitle": {
+    "message": "lgtmapp web extension",
+    "description": "The title of the browser action button"
+  }
 }
